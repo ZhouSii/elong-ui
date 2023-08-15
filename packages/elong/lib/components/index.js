@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const o=require("./components.js"),r=require("./package.json.js"),s=function(e){Object.entries(o).forEach(([t,n])=>{e.component(t,n)})},c={install:s,version:r.version};exports.default=c;

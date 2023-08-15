@@ -1,0 +1,6 @@
+node_modules
+dist
+demo
+.history
+**/node_modules
+**/dist
