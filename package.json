@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "pnpm -C play dev",
-    "build:elong": "gulp -f script/build/index.ts"
+    "build:elong": "gulp -f script/build/index.ts",
+    "publish:elong": "gulp -f script/publish/index.ts"
   },
   "author": "",
   "license": "MIT",
