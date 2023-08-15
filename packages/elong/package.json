@@ -4,12 +4,29 @@
   "description": "",
   "main": "lib/components/index.js",
   "module": "es/components/index.mjs",
+  "typings": "es/components/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./es/components/index.d.ts",
+      "import": "./es/components/index.mjs",
+      "require": "./lib/components/index.js"
+    },
+    "./es": {
+      "types": "./es/components/index.d.ts",
+      "import": "./es/components/index.mjs"
+    },
+    "./lib": {
+      "types": "./lib/components/index.d.ts",
+      "require": "./lib/components/index.js"
+    },
+    "./*": "./*"
+  },
   "files": [
     "es",
     "lib"
   ],
   "keywords": [
-    "easyest",
+    "elong-vue3-ui",
     "vue3组件库"
   ],
   "sideEffects": [
@@ -20,9 +37,8 @@
   },
   "author": "ZhouGaoFeng tzjz6065278@163.com",
   "license": "MIT",
-  "typings": "lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/qddidi/easyest"
+    "url": "https://github.com/ZhouSii/elong-ui"
   }
 }

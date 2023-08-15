@@ -44,7 +44,6 @@ export default defineConfig({
     lib: {
       entry: "./index.ts",
       name: "elong",
-      formats: ["es", "cjs"],
     },
   },
   plugins: [
