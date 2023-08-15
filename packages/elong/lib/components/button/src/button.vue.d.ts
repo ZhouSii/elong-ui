@@ -1,4 +1,4 @@
-import type { ButtonPropsType } from "./button";
+import type { ButtonPropsType } from './button';
 declare const _sfc_main: import("vue").DefineComponent<{
     type: {
         type: import("vue").PropType<import("./interface").ButtonType>;

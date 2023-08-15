@@ -1,5 +1,5 @@
-import type { ExtractPropTypes, PropType } from "vue";
-import type { ButtonNativeType, ButtonSizeType, ButtonType } from "./interface";
+import type { ExtractPropTypes, PropType } from 'vue';
+import type { ButtonNativeType, ButtonSizeType, ButtonType } from './interface';
 export declare const Props: {
     type: {
         type: PropType<ButtonType>;

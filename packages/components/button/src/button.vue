@@ -12,10 +12,10 @@
 </template>
 
 <script lang="ts" setup name="ELongButton">
-import "../styles/index.scss";
-import { computed } from "vue";
-import type { ButtonPropsType } from "./button";
-import { Props, Emits } from "./button";
+import '../styles/index.scss';
+import { computed } from 'vue';
+import type { ButtonPropsType } from './button';
+import { Props, Emits } from './button';
 const props: ButtonPropsType = defineProps(Props);
 const emits = defineEmits(Emits);
 
@@ -25,16 +25,16 @@ const classList = computed(() => {
     {
       [`br-button--${type}`]: type,
       [`br-button--${size}`]: size,
-      ["is-disabled"]: disabled,
-      ["is-loading"]: loading,
-      ["is-round"]: round,
-      ["is-plain"]: plain,
-      ["is-circle"]: circle,
-    },
+      ['is-disabled']: disabled,
+      ['is-loading']: loading,
+      ['is-round']: round,
+      ['is-plain']: plain,
+      ['is-circle']: circle
+    }
   ];
 });
 
 function handlerClick(evt: MouseEvent): void {
-  emits("click", evt);
+  emits('click', evt);
 }
 </script>

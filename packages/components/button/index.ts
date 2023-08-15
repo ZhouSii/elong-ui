@@ -1,6 +1,6 @@
-import button from "./src/button.vue";
+import button from './src/button.vue';
 
-import { withInstall } from "@elong-ui/utils";
+import { withInstall } from '@elong-ui/utils';
 
 export const ELongButton = withInstall(button);
 

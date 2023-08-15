@@ -1,63 +1,63 @@
-import type { ExtractPropTypes, PropType } from "vue";
-import type { ButtonNativeType, ButtonSizeType, ButtonType } from "./interface";
+import type { ExtractPropTypes, PropType } from 'vue';
+import type { ButtonNativeType, ButtonSizeType, ButtonType } from './interface';
 
 export const Props = {
   type: {
     type: String as PropType<ButtonType>,
-    default: (): ButtonType => "default",
+    default: (): ButtonType => 'default',
     validator(value: ButtonType): boolean {
       return (
-        ["default", "primary", "success", "info", "danger", "warning"] as const
+        ['default', 'primary', 'success', 'info', 'danger', 'warning'] as const
       ).includes(value);
-    },
+    }
   },
   size: {
     type: String as PropType<ButtonSizeType>,
     validator(value: ButtonSizeType): boolean {
-      return (["default", "medium", "small", "mini", "tiny"] as const).includes(
+      return (['default', 'medium', 'small', 'mini', 'tiny'] as const).includes(
         value
       );
-    },
+    }
   },
   plain: {
     type: Boolean,
-    default: (): boolean => false,
+    default: (): boolean => false
   },
   round: {
     type: Boolean,
-    default: (): boolean => false,
+    default: (): boolean => false
   },
   circle: {
     type: Boolean,
-    default: (): boolean => false,
+    default: (): boolean => false
   },
   loading: {
     type: Boolean,
-    default: (): boolean => false,
+    default: (): boolean => false
   },
   disabled: {
     type: Boolean,
-    default: (): boolean => false,
+    default: (): boolean => false
   },
   icon: {
     type: String,
-    default: (): string => "",
+    default: (): string => ''
   },
   autoFocus: {
     type: Boolean,
-    default: (): boolean => false,
+    default: (): boolean => false
   },
   nativeType: {
     type: String as PropType<ButtonNativeType>,
-    default: (): ButtonNativeType => "button",
+    default: (): ButtonNativeType => 'button',
     validator(value): boolean {
-      return (["button", "submit", "reset"] as const).includes(value);
-    },
-  },
+      return (['button', 'submit', 'reset'] as const).includes(value);
+    }
+  }
 };
 
 export const Emits = {
-  click: (evt: MouseEvent): MouseEvent => evt,
+  click: (evt: MouseEvent): MouseEvent => evt
 };
 
 export type ButtonPropsType = ExtractPropTypes<typeof Props>;

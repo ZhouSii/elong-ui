@@ -1,0 +1,4 @@
+**.d.ts
+/packages/elong
+dist
+node_modules

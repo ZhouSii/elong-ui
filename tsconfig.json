@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "jsx": "preserve",
     "module": "ESNext", // 指定模块代码生成规范，这里为 ECMAScript 标准的最新版
     "declaration": false, // 是否在编译时生成相应的 .d.ts 声明文件
     "noImplicitAny": false, // 是否禁止隐式 any（即没有明确指定类型）的使用
