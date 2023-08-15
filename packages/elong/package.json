@@ -2,8 +2,8 @@
   "name": "elong-vue3-ui",
   "version": "1.0.1",
   "description": "",
-  "main": "lib/index.js",
-  "module": "es/index.mjs",
+  "main": "lib/components/index.js",
+  "module": "es/components/index.mjs",
   "files": [
     "es",
     "lib"
