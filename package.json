@@ -3,18 +3,27 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "prepare": "husky install",
     "dev": "pnpm -C play dev",
+    "dev:h5": "pnpm -C play-h5 dev",
     "build:elong": "gulp -f script/build/index.ts",
     "publish:elong": "gulp -f script/publish/index.ts",
     "docs:dev": "pnpm run --filter site docs:dev",
     "docs:build": "pnpm run --filter site docs:build",
     "docs:deploy": "pnpm run --filter site docs:deploy",
-    "lint:script": "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./",
+    "lint:script": "eslint --fix --ext .ts,.tsx,.vue,.js,.jsx",
     "lint:style": "stylelint --fix \"*.{css,scss,less}\""
   },
   "author": "",
   "license": "MIT",
+  "lint-staged": {
+    "**/*.{js,jsx,tsx,ts}": [
+      "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./"
+    ]
+  },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
     "@types/gulp": "^4.0.13",
     "@types/gulp-autoprefixer": "^0.0.34",
     "@types/gulp-sass": "^5.0.1",
@@ -25,6 +34,7 @@
     "@vue/runtime-core": "^3.3.4",
     "@vue/test-utils": "^2.4.1",
     "c8": "^8.0.1",
+    "commitlint": "^17.7.1",
     "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
@@ -33,6 +43,8 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-sass": "^5.1.0",
     "happy-dom": "^10.9.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
     "postcss-html": "^1.5.0",
     "prettier": "^3.0.1",
     "release-it": "^16.1.5",
@@ -54,6 +66,7 @@
   },
   "dependencies": {
     "@elong-ui/components": "workspace:^1.0.0",
-    "@elong-ui/utils": "workspace:^1.0.0"
+    "@elong-ui/utils": "workspace:^1.0.0",
+    "@elong-ui/vant": "workspace:^1.0.0"
   }
 }

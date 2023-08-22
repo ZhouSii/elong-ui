@@ -1,6 +1,8 @@
 packages:
   # 存放组件库和其他工具库
-  - "packages/**"
+  - 'packages/**'
   # 存放组件测试的代码
-  - "play"
-  - "site"
+  - 'play'
+  - 'play-h5'
+  # 文档
+  - 'site'
