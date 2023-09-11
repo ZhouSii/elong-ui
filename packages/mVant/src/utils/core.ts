@@ -22,9 +22,6 @@ export function selectDictLabels(
   data: unknown[],
   separator?: string
 ): string {
-  // console.log('actions:', options)
-  // console.log('data.length:', data)
-
   if (!options.length || !data.length) {
     return '';
   }

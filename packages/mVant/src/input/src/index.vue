@@ -1,7 +1,12 @@
 <template>
-  <van-field v-bind="$attrs" v-model="model" class="m-input">
+  <van-field
+    v-bind="$attrs"
+    v-model="model"
+    :placeholder="placeholder"
+    :label-width="labelWidth"
+  >
     <template v-if="!isInput" #input>
-      <slot name="input" />
+      <slot />
     </template>
     <template #button>
       <slot name="button" />
@@ -11,6 +16,7 @@
 
 <script setup lang="ts" name="EvInput">
 import { computed } from 'vue';
+import { defaultProps } from '../../utils';
 
 const props = defineProps({
   modelValue: {
@@ -20,7 +26,12 @@ const props = defineProps({
   isInput: {
     type: Boolean,
     default: true
-  }
+  },
+  placeholder: {
+    type: String,
+    default: '请输入'
+  },
+  labelWidth: defaultProps.labelWidth
 });
 const emit = defineEmits(['update:modelValue']);
 
@@ -33,15 +44,24 @@ const model = computed({
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
-.m-input {
-  // padding: 15px 16px;
-  :deep(.van-field__label) {
-    position: relative;
+:deep(.van-field__label) {
+  font-size: 14px;
+}
+:deep(.van-field__value) {
+  font-size: 14px;
+  color: #bfbfbf;
+}
 
-    &::before {
-      position: absolute;
-      left: -10px;
-    }
+:deep(.van-field__label--top) {
+  margin-bottom: 10px;
+}
+
+:deep(.van-field__label) {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: -10px;
   }
 }
 </style>
